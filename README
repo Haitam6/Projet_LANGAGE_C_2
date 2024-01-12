@@ -1,0 +1,25 @@
+Projet réalisé par Haitam ELQASSIMI & Thomas NGUYEN  
+        
+        -- Configuration --
+
+Le fichier tree.conf contient les paramètres :
+- datafile est le chemin du fichier de stockage du fichier a rechercher.
+- pidfile est le chemin du fichier de stockage de l'identifiant du programme où envoyer le signal.
+
+        -- Execution --
+
+Sur un premier terminal on fait
+./treeload
+
+Sur un second terminal on fait
+./treesearch <nomdufichier>
+
+        -- Résumé --
+
+Le fichier treeload.data est bien généré et le fichier passé en paramètre est bien stocké.
+Le fichier treeload.pid est bien généré également et le pid est bien stocké.
+Le programme treesearch.c envoi bien le signal SIGHUP et le signal est bien reçu par le programme treeload.c
+
+/!\ Malheureusement l'appel à la fonction search() a un problème et donc la recherche ne fonctionne pas lorsque le signal est reçu. /!\
+
+
